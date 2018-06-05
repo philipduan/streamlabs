@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 
 <head>
-  <link rel="stylesheet" type="css/text" href="./dest/css/style.min.css">
+  <link rel="stylesheet" type="css/text" href="./dest/css/style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-  <h1>Hello</h1>
-  <script src="./dest/js/script.min.js"></script>
+
+  <div class="login">
+    <form class="login-form">
+      <p class="login-form-username">
+        <label for="username">Username</label>
+        <input type="text">
+      </p class="login-form-password">
+
+      <p class="login-form-password">
+        <label for="password">Password</label>
+        <input type="password">
+      </p>
+      <button id="login-form-button" type="button">Sign in</button>
+    </form>
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDdOyn1VS2LpNZ6eyVCJ1-odsl04RO5MAI",
+      authDomain: "streamlabs-cc5ac.firebaseapp.com",
+      databaseURL: "https://streamlabs-cc5ac.firebaseio.com",
+      projectId: "streamlabs-cc5ac",
+      storageBucket: "streamlabs-cc5ac.appspot.com",
+      messagingSenderId: "803973543950"
+    };
+    firebase.initializeApp(config);
+
+  </script>
+  <script src="./dest/js/script.js"></script>
 </body>
